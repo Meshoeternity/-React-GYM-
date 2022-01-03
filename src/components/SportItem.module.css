@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Julius+Sans+One&display=swap');
+ *{
+  padding:0;
+  margin:0;
+} 
+.itemgroup{
+   /* background-image:url(https://images.unsplash.com/photo-1517130038641-a774d04afb3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80); */
+   /* background-image:url(https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80); 
+   background-attachment:fixed;
+  background-size:cover;
+  background-position:center center;  */
+  /* width: 100vh;
+  background-repeat: no-repeat; */
+  box-sizing:border-box;
+  font-family: 'Andika', sans-serif;
+  padding:0;
+  margin:0;
+  /* background-color: blanchedalmond; */
+
+
+} 
+/* body:before{
+  content:'';
+  background-color:rgb(0 0 0 / 0.7);
+  position:absolute;
+  height:100%;
+  width:100%;
+  left:0;
+  top:0;
+} */
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Julius Sans One', sans-serif;
+  margin-bottom:20px;
+ 
+}
+.container{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  z-index:2;
+  height:100%;
+}
+.container .card{
+  vertical-align:top;
+  width:280px;
+  height:450px;
+  position:relative;
+  margin:30px;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.8);
+  border-radius:25px;
+  background-color:rgba(255,255,255, 0.1);
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  /* align-items:center; */
+  align-items:flex-end;
+  backdrop-filter:blur(5px);
+  text-align:center;
+
+}
+.card .content{
+  padding:30px;
+  transition:0.8s all ease;
+  color:#ccc;
+  transform:translateY(200px);
+  opacity:0;
+}
+.card:hover .content{
+  transform:translateY(0px);
+  opacity:1;
+}
+.card img{
+  position:absolute;
+  /* filter: invert(82%) sepia(60%) saturate(2929%) hue-rotate(353deg) brightness(105%) contrast(103%); */
+  width:140px;
+  top:50px;
+  /* opacity:0.2; */
+  z-index:-1;
+  height:170px ;
+}
+h1{
+  color:#fff;
+  text-align:center;
+  z-index:9;
+  position:relative;
+  margin-bottom:-20px;
+  padding-bottom:0;
+  padding-top:20px;
+  font-weight:400;
+}
+.card .content h2{
+  color:#fff;
+  font-weight:400;
+}
+.card .content a{
+  display:inline-block;
+  margin-top:20px;
+  text-decoration:none;
+  padding:8px 30px 11px;
+  border:2px solid #fff;
+  text-transform:uppercase;
+  color:#fff;
+  border-radius:50px;
+  box-shadow: 0px 5px 50px rgba(0,0,0,0.8);
+  transition:0.8s all ease;
+}
+.card .content a:hover{
+  /* background: #9C27B0; */
+  background:hsl(44, 89%, 55%) ;
+}
+
+
+
+@media only screen and (max-width:900px) {
+  .container{
+    display:block;
+  }
+}

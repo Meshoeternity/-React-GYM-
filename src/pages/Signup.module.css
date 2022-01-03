@@ -1,0 +1,243 @@
+:root {
+    --jake-color: hsl(44, 89%, 55%);
+    --transparent-jake-color: hsla(44, 89%, 55%, .3);
+    --light-color: #F4F4F4; 
+    /* --light-color: #080000;  */
+    --placeholder-color: hsla(0, 0%, 45%, .6);
+
+ /*
+    This form is fully scalable, so feel free to adjust the value of '--form-width' in order to scale all the things up ^-^
+  You can either use absolute or relative values, so feel free to play with those :D
+ */
+    --form-width: 450px;
+    /* --form-color: #232323; */
+      --form-color: #232323;
+    --form-padding: calc(var(--form-width) * .05);
+    --formtitle-size: calc(var(--form-width) * .12);
+    --form-input-text-size: calc(var(--form-title-size) * .5);
+    --formterms-text-size: calc(var(--form-input-text-size) * .715);
+    --form-checkbox-size: calc(var(--form-terms-text-size) * 1.25);
+    --form-header-size: calc(var(--form-width) * .23);
+    --form-header-padding: calc(var(--form-header-size) * .20);
+
+    --jake-size: calc(var(--form-width) * .75);
+}
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+.signupgroup {
+    /* background-color: var(--jake-color); */
+    font-family: Helvetica, sans-serif;
+      /* background-image:url(https://images.unsplash.com/photo-1517130038641-a774d04afb3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80); */
+      /* background-attachment:fixed; */
+      background-size:cover;
+      /* background-position:center center; */
+      opacity: 0.9;
+     
+}
+.align-center {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.formcontainer {
+    position: relative;
+    margin: 0 auto;
+    width: var(--form-width);
+    min-height: calc(var(--form-width) * 1.15);
+    background-color: var(--form-color);
+    border-radius: calc(var(--form-width) * .03);
+    
+}
+.formheader {
+    position: relative;
+    width: 100%;
+    padding: 
+        var(--form-header-padding) 
+        0
+        calc(var(--form-header-padding) * 1.50)
+        0;
+    font-size: var(--form-header-size);
+    /* color: var(--form-color); */
+    color: hsl(44, 89%, 55%);
+    text-align: center;
+    user-select: none;
+ 
+}
+.formcontainer::before,
+.formcontainer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: var(--jake-size);
+    height: var(--jake-size);
+    /* background-image: url('https://i.ibb.co/SXMQN8J/dancing-jake.png'); */
+    background-size: cover;
+}
+.formcontainer::before {
+    left: calc(var(--jake-size) * -1.25);
+    transform: rotateY(180deg);
+}
+.formcontainer::after {
+    right: calc(var(--jake-size) * -1.25);
+}
+.formcontainer form {
+    position: relative;
+    display: flex;
+    padding: var(--form-padding);
+    flex-direction: column;
+    top: 0px;
+}
+.formcontainer form label,
+.formcontainer form button {
+    cursor: pointer;
+}
+.formcontainer form .formtitle {
+    padding: 
+        calc(var(--form-padding) * .5) 
+        0
+        calc(var(--form-padding) * 1.5)
+        0;
+    width: inherit;
+    font-size: var(--formtitle-size);
+    text-align: center;
+    color: var(--jake-color);
+    user-select: none;
+}
+.formcontainer form .inputgroup {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.formcontainer form .inputgroup:not(:first-of-type) {
+    padding-top: var(--form-padding);
+}
+.formcontainer form .inputgroup:not(:last-of-type) {
+    padding-bottom: var(--form-padding);
+}
+.formcontainer form .inputgroup button {
+    position: relative;
+    margin: 0 auto;
+    padding: 
+        calc(var(--formtitle-size) * .18)
+        calc(var(--formtitle-size) * .25);
+    font-size: var(--form-input-text-size);
+    background-color: var(--jake-color);
+    color: var(--form-color);
+    border: calc(var(--formtitle-size) * .025) solid var(--jake-color);
+    border-radius: calc(var(--formtitle-size) * .09);
+    transition: all 350ms ease-in;
+    font-weight: bold;
+    width: 85%;
+}
+.formcontainer form .inputgroup button:hover {
+    background-color: var(--jake-color);
+    color: var(--form-color);
+}
+.formcontainer form .inputgroup input[type="text"],
+.formcontainer form .inputgroup input[type="password"]
+/* .formcontainer form .inputgroup input[type="url"]  */
+{
+    flex: .5;
+    font-size: var(--form-input-text-size);
+    padding: 
+      calc(var(--form-input-text-size) * .05)
+      calc(var(--form-input-text-size) * .25);
+    background-color: var(--transparent-jake-color);
+    outline: none;
+    border: 0 none;
+    border-radius: calc(var(--form-input-text-size) * .15);
+    caret-color: var(--jake-color);
+    color: var(--light-color);
+    transition: all 350ms ease-out;
+}
+.formcontainer form .inputgroup input::placeholder {
+    user-select: none;
+}
+.formcontainer form .inputgroup .additionallabel {
+    position: absolute;
+    left: 35%;
+    bottom: calc(var(--form-input-text-size) * -.1);
+    color: var(--placeholder-color);
+    font-size: calc(var(--form-input-text-size) * .65);
+    pointer-events: none;
+    transition: all 350ms ease-out;
+}
+.formcontainer form .inputgroup input:placeholder-shown + .additionallabel {
+    bottom: calc(var(--forminput-text-size) * .97);
+    font-size: calc(var(--forminput-text-size) * .8);
+}
+.formcontainer form .inputgroup label {
+    position: relative;
+    flex: .86;
+    text-align: center;
+}
+.formcontainer form .inputgroup label input[type="checkbox"] {
+    display: none;
+}
+.formcontainer form .inputgroup label .jakebox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: var(--form-checkbox-size);
+    height: var(--form-checkbox-size);
+    background-color: inherit;
+    border: calc(var(--form-checkbox-size) / 16.75) solid var(--transparent-jake-color);
+    border-radius: calc(var(--form-checkbox-size) / 5.6);
+    transition: all 350ms ease;
+}
+.formcontainer form .inputgroup label .jakebox::before,
+.formcontainer form .inputgroup label .jakebox::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--form-checkbox-size) * .15);
+    height: calc(var(--form-checkbox-size) * .7);
+    background-color: var(--light-color);
+    border-radius: calc(var(--form-checkbox-size) * .05);
+    opacity: 0;
+    transition: opacity 350ms cubic-bezier(.23, .71, .31, .99);
+}
+.formcontainer form .inputgroup label .jakebox::before {
+    bottom: 15%;
+    transform: rotate(45deg);
+}
+.formcontainer form .inputgroup label .jakebox::after {
+    bottom: 16%;
+    left: 20%;
+    height: calc(var(--form-checkbox-size) * .35);
+    transform: rotate(-45deg);
+}
+.formcontainer form .inputgroup label input[type="checkbox"]:checked + .formterms .jakebox {
+    border-color: hsla(44, 89%, 55%, .7);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--jake-color);
+}
+.formcontainer form .inputgroup label input[type="checkbox"]:checked + .formterms .jakebox::before, 
+.formcontainer form .inputgroup label input[type="checkbox"]:checked + .formterms .jakebox::after {
+    transition: opacity 350ms cubic-bezier(.06, .71, 0, .78);
+    opacity: 1;
+}
+.formcontainer form .inputgroup label .formterms {
+    position: relative;
+    display: inline-block;
+    padding-left: calc(var(--form-checkbox-size) * 1.75);
+    color: var(--light-color);
+    font-size: var(--form-terms-text-size);
+    text-align: center;
+    user-select: none;
+}
+.formcontainer form .inputgroup label .formterms .colorfuldescription {
+    position: relative;
+    color: var(--jake-color);
+}
+.formcontainer form .inputgroup label .formterms .colorfuldescription::after {
+    content: '';
+    position: absolute;
+    bottom: calc(var(--formterms-text-size) * -.05);
+    left: 0;
+    width: 100%;
+    height: calc(var(--formterms-text-size) * .05);
+    background-color: var(--jake-color);
+}
