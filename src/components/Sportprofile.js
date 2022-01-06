@@ -12,27 +12,19 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
   "max-glare": 0.3,
 })
 
-function SportItem(props) {
+function SportProfile(props) {
   const { sport, sportId } = props
   console.log(sport)
   const [show, setShow] = useState(false)
-  // const { show, handleOpen,handleClose } = useContext(SportsContext)
-  // console.log(handleOpen)
-  // console.log(show)
-  const handleOpen = () => {
-    setShow(true)
-  }
-
-  const handleClose = () => {
-    setShow(false)
-  }
+  
+ 
 
   return (
     <>
       <div className={styles.itemgroup}>
         <div className={styles.container}>
           <div className={styles.card}>
-          
+           
             <img src={sport.poster} />
             <div className={styles.content}>
               <h2>{sport.title}</h2>
@@ -41,17 +33,13 @@ function SportItem(props) {
                 {sport.coach.lastName}{" "}
               </p>
 
-              <a href="#" onClick={handleOpen}>
-                Subscribe to Class
-              </a>
+            
             </div>
           </div>
         </div>
       </div>
-
-      <SubClass show={show} key={sportId} sport={sport} handleClose={handleClose} />
     </>
   )
 }
 
-export default SportItem
+export default SportProfile

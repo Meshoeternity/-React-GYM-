@@ -11,7 +11,7 @@
  */
     --form-width: 450px;
     /* --form-color: #232323; */
-      --form-color: #232323;
+      --form-color: #232323f3;
     --form-padding: calc(var(--form-width) * .05);
     --formtitle-size: calc(var(--form-width) * .12);
     --form-input-text-size: calc(var(--form-title-size) * .5);

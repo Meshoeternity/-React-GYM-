@@ -12,11 +12,11 @@ function AllSports() {
         <img
           src="https://images.unsplash.com/photo-1574755851171-8959b8334d6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
           style={{
-            width: "100%",
+            width: "150%",
             position: "absolute",
             zIndex: "-1",
             // height: "100vh",
-            minHeight:"100vh",
+            minHeight:"150vh",
             top: "0",
             backgroundsize: "cover",
             backgroundRepeat: "no-repeat",

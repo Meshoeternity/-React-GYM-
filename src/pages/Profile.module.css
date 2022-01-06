@@ -7,32 +7,33 @@
 }
 
 .profilegroup {
-  background: #fffcdd;
+  background: linear-gradient(rgba(0,0,0,0.75)  ,rgba(0,0,0,0.75)) , url("../assets/img2.jpg") center/cover no-repeat;
   padding: 2.23em;
 }
 
 .titlepen {
-  color: #333;
+  color: rgb(252, 245, 245);
   font-family: "Coda", sans-serif;
   text-align: center;
 }
 .titlepen span {
-  color: #55acee;
+  color: #616311;
 }
 
 .userprofile {
   margin: auto;
 	width: 25em; 
   height: 11em;
-  background: #fff;
+  background: hsla(44, 89%, 55%, 0.479);
   border-radius: .3em;
+  margin-bottom:100px ;
 }
 
 .userprofile  .username {
   margin: auto;
-  margin-top: -4.40em;
+  margin-top: -3.10em;
   margin-left: 5.80em;
-  color: #658585;
+  color: #070707;
   font-size: 1.53em;
   font-family: "Coda", sans-serif;
   font-weight: bold;
@@ -50,7 +51,7 @@
   margin-top: 1.35em;
   margin-right: 4.43em;
   width: 14em;
-  color: #c0c5c5; 
+  color: #f7f3f3; 
   font-size: .87em;
   font-family: "varela round", sans-serif;
 }

@@ -9,7 +9,7 @@ function Login() {
   return (
       
    <>
-    <img src="https://i.postimg.cc/mkx7Y4xN/login-removebg-preview-1.png"
+    <img src="https://images.pexels.com/photos/4761785/pexels-photo-4761785.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       style={{ width: "100%" ,position:"absolute",zIndex:"-12" , top:"0" ,opacity:"0.9",backgroundsize:"cover",  minHeight:"100vh"}} />
   
 <div  className={styles.formcontainer}>
@@ -19,7 +19,7 @@ function Login() {
     </h3>
    
     <div className={styles.inputgroup}>
-      <input type="text" name="" placeholder=" "required />
+      <input type="text" name="email" placeholder=" "required />
       <span className={styles.additionallabel}>Email address</span>
     </div>
     <div className={styles.inputgroup}>

@@ -1,9 +1,11 @@
 import styles from "./Navbar.module.css"
 import logo from "../assets/logo_g-removebg-preview.png"
 import { Link } from "react-router-dom"
-import { Nav } from "react-bootstrap"
+import SportsContext from "../utils/SportsContext"
+import { useContext } from "react"
 
 function NavbarItem() {
+  const { logout } = useContext(SportsContext)
   return (
     <>
       <nav className={styles.stroke}>
@@ -32,6 +34,8 @@ function NavbarItem() {
             <a href="#">Home</a>
             </Link>
           </li>
+          {localStorage.tokenSports ? (
+            <>
           <li>
           <Link  to="/sports" className={{textDecoration:"none"}}>
             <a href="#">SPORTS</a>
@@ -42,8 +46,8 @@ function NavbarItem() {
             <a href="#">COACHS</a>
             </Link>
           </li>
-          {localStorage.tokenSports ? (
-         <>
+         
+         
           
           <li>
           <Link  to="/profile" className={{textDecoration:"none"}}>
@@ -52,7 +56,7 @@ function NavbarItem() {
           </li>
        
           <li>
-          <Link  to="/logout" className={{textDecoration:"none"}}>
+          <Link  to="/home" onClick={logout} className={{textDecoration:"none"}}>
             <a href="#">LOGOUT</a>
             </Link>
           </li>

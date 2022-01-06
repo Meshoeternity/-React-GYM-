@@ -20,8 +20,9 @@ function CoachItem(props) {
  
   <h1>{coach.firstName}{coach.lastName}</h1>
 
-  {/* <!-- and role or location --> */}
-  {/* <h2>- {coach.sport.title} -</h2> */}
+  {" "}
+  
+  <h2>- {coach.sport?.title} -</h2>
 
 </header>
 
