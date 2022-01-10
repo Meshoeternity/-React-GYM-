@@ -4,6 +4,7 @@ import VanillaTilt from "vanilla-tilt"
 import { useContext, useState } from "react"
 import SubClass from "./SubClass"
 import SportsContext from "../utils/SportsContext"
+import { Button } from "react-bootstrap"
 
 VanillaTilt.init(document.querySelectorAll(".card"), {
   max: 25,
@@ -13,14 +14,16 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
 })
 
 function SportProfile(props) {
-  const { sport, sportId } = props
-  console.log(sport)
-  const [show, setShow] = useState(false)
+  const { sport,classId} = props
+  const {deletesubscribeClass} = useContext(SportsContext)
+  
+  
   
  
 
   return (
     <>
+    
       <div className={styles.itemgroup}>
         <div className={styles.container}>
           <div className={styles.card}>
@@ -32,7 +35,11 @@ function SportProfile(props) {
                 {sport.coach.firstName}
                 {sport.coach.lastName}{" "}
               </p>
-
+              <Button variant="warning"  onClick={() => {
+                  deletesubscribeClass(classId)
+                }} >
+           delete
+          </Button>
             
             </div>
           </div>

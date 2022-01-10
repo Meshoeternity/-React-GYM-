@@ -17,6 +17,7 @@
   text-align: center;
 }
 .titlepen span {
+  top: 20px;
   color: #616311;
 }
 
@@ -64,20 +65,7 @@
   border-radius: 18em;
 }
 
-/* .userprofile ul.data {
-	margin: 2em auto;
-	height: 3.70em;
-  background: #4eb6b6;
-  text-align: center;
-  border-radius: 0 0 .3em .3em;
-}
-.userprofile li {
-	margin: 0 auto;
-  padding: 1.30em; 
-  width: 33.33334%;
-  display: table-cell;
-  text-align: center;
-} */
+
 
 .userprofile span {
 	font-family: "varela round", sans-serif;
@@ -99,7 +87,11 @@ footer > h1 {
   line-height: 6;
   font-size: 1.6em;
 }
-footer > h1 a {
+ .hh3  {
   text-decoration: none;
   color: #ea4c89;
+ text-align: center;
+margin-top: 30px;
+
+
 }

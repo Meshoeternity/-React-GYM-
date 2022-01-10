@@ -13,6 +13,7 @@ header img {
   margin: 20px auto;
   display: block;
   width: 200px;
+  height: 200px;
   border: 5px solid #fff;
 }
 
@@ -101,6 +102,26 @@ aside:hover .profile-bio {
   font-size: 16px;
 }
 
+.content a{
+  display:inline-block;
+  margin-top:10px;
+  text-decoration:none;
+  padding:10px 20px 11px 10px;
+  border:2px solid #fff;
+  text-transform:uppercase;
+  color:#fff;
+  border-radius:50px;
+  box-shadow: 0px 5px 50px rgba(0,0,0,0.8);
+  transition:0.8s all ease;
+  margin-left: 60px;
+  
+}
+.content a:hover{
+ 
+  
+  background: url(https://s-media-cache-ak0.pinimg.com/736x/3a/1f/02/3a1f02c10700daa80655a302c5a27acf.jpg);
+  color:#fff;
+}
 /*PROFILE IMAGE ANIMATE */
 
 @keyframes profile_image {

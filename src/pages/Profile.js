@@ -35,26 +35,32 @@ function Profile() {
           <div className={styles.username}>
             {profile.firstName} {profile.lastName}
           </div>
-          {/* <div  className={styles.bio} >
-  	Senior UI Designer
-  </div> */}
+        
           <div className={styles.description}>{profile.email}</div>
         </div>
-        <footer>
-          <h1>
-            {/* <span class="entypo-dribbble"></span> {""} */}
-           
-          </h1>
-        </footer>
+       
       </div>
-
-      <Row className="mt-5">
-              <h3>Subscribeclass</h3>
+     
+      <h2 className={styles.hh3}>Subscribeclass</h2>
+     
+      <Row className="mt-5"  md={5}>
+         
+            
               {profile.classes.map(classs => (
-                // <SportItem sport={classs.sport} key={classs._id} />
-                <SportProfile sport={classs.sport} key={classs._id} />
+            
+                <SportProfile sport={classs.sport} classId={classs._id} key={classs._id} />
               ))}
-            </Row>
+           
+           </Row>
+           {/* <Row className="mt-5"  md={5}>
+              <h3>Privtclass</h3>
+              {profile.classes.map(classs => (
+            
+                <CoachProfile sport={classs.sport} key={classs._id} />
+              ))}
+           
+           </Row> */}
+
     </>
   )
 }
