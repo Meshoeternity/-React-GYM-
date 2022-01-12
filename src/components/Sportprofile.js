@@ -17,9 +17,6 @@ function SportProfile(props) {
   const { sport,classId} = props
   const {deletesubscribeClass} = useContext(SportsContext)
   
-  
-  
- 
 
   return (
     <>

@@ -19,7 +19,6 @@ function App() {
   const [sports, setSports] = useState([])
   const [profile, setProfile] = useState(null)
   const [coachs, setCoachs] = useState([])
-  // const [show, setShow] = useState(false)
 
   const navigate = useNavigate()
   //--------------------------------------------------------------------------------------------------------------------------------------
@@ -42,6 +41,7 @@ function App() {
     setCoachs(response.data)
   }
 
+  //-------------------------------------------------------------------------------------------------------------------------------
   useEffect(() => {
     getSports()
     if (localStorage.tokenSports) getProfile()
@@ -126,57 +126,70 @@ function App() {
       else console.log(error)
     }
   }
-//-----------------------------------------------------------------------------------------
-const deletesubscribeClass = async  (classId) => {
-  try {
-   
-    await axios.delete(
-      `http://localhost:5000/api/classes/${classId}/sub-class`,
-      {
+  //-----------------------------------------------------------------------------------------
+  const deletesubscribeClass = async classId => {
+    try {
+      await axios.delete(`http://localhost:5000/api/classes/${classId}/sub-class`, {
         headers: {
           Authorization: localStorage.tokenSports,
         },
-      }
-    )
-    getSports()
-    getProfile()
-    navigate("/profile")
-    toast.success("Class removed")
-  } catch (error) {
-    if (error.response) toast.error(error.response.data)
-    else console.log(error)
+      })
+      getSports()
+      getProfile()
+      navigate("/profile")
+      toast.success("Class removed")
+    } catch (error) {
+      if (error.response) toast.error(error.response.data)
+      else console.log(error)
+    }
   }
-}
 
   //-----------------------------------------------------------------------------------------------------
-  // const privtClass = async e => {
-  //   e.preventDefault()
-  //   try {
-  //     const form = e.target
-  //     const privtclassBody = {
-  //       time = form.elements.time.value
+  const privtClass = async (e) => {
+    e.preventDefault()
+    try {
+      const form = e.target
+      const privtclassId = form.elements.time.value
 
-  //     }
-  //     form.reset()
-  //     await axios.post(
-  //       `http://localhost:5000/api/coachs/${coachId}/privtclass`,privtclassBody,
-      
-  //       {
-  //         headers: {
-  //           Authorization: localStorage.tokenSports,
-  //         },
-  //       }
-  //     )
-  //     getSports()
-  //     getProfile()
-  //     navigate("/profile")
-  //     toast.success("privtClass added")
-  //   } catch (error) {
-  //     if (error.response) toast.error(error.response.data)
-  //     else console.log(error)
-  //   }
-  // }
+      form.reset()
+      await axios.post(
+        `http://localhost:5000/api/privtclass/${privtclassId}/sub-privtclass`,
+        {},
+
+        {
+          headers: {
+            Authorization: localStorage.tokenSports,
+          },
+        }
+      )
+      getSports()
+      getProfile()
+      navigate("/profile")
+      toast.success("privtClass added")
+    } catch (error) {
+      if (error.response) toast.error(error.response.data)
+      else console.log(error)
+    }
+  }
   //----------------------------------------------------------------
+  const deletesubscribePrivtClass = async privtclassId => {
+    try {
+      await axios.delete(`http://localhost:5000/api/privtclass/${privtclassId}/sub-privtclass`, {
+        headers: {
+          Authorization: localStorage.tokenSports,
+        },
+      })
+      getSports()
+      getProfile()
+      navigate("/profile")
+      toast.success("sub-privtclass removed")
+    } catch (error) {
+      if (error.response) toast.error(error.response.data)
+      else console.log(error)
+    }
+  }
+
+  //------------------------------------------------------
   const store = {
     sports,
     signup,
@@ -185,8 +198,9 @@ const deletesubscribeClass = async  (classId) => {
     profile,
     coachs,
     subscribeClass,
-    // privtClass,
+    privtClass,
     deletesubscribeClass,
+    deletesubscribePrivtClass,
   }
 
   return (

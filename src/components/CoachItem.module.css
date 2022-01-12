@@ -102,14 +102,14 @@ aside:hover .profile-bio {
   font-size: 16px;
 }
 
-.content a{
+.content  button{
   display:inline-block;
   margin-top:10px;
   text-decoration:none;
   padding:10px 20px 11px 10px;
   border:2px solid #fff;
   text-transform:uppercase;
-  color:#fff;
+  color:rgb(3, 66, 27);
   border-radius:50px;
   box-shadow: 0px 5px 50px rgba(0,0,0,0.8);
   transition:0.8s all ease;

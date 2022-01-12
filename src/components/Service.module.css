@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.titless{
+  
+    color: rgb(55, 3, 138);
+  
+    font-size: 60px;
+
+}
+.row{
+ margin-left: 100px;
+
+}
+.titl{
+    margin-left: 180px;
+  font-size: 30px;
+ 
+}
+/* webkit-box-sizing: "border-box",
+moz-box-sizing: "border-box",
+box-sizing: border-box; */

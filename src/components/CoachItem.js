@@ -1,9 +1,23 @@
 import styles from "./CoachItem.module.css"
+import { useContext, useState } from "react"
+import SubPrivtClass from "./SubPrivtClass"
+import { Link } from "react-router-dom"
 
 function CoachItem(props) {
-  const { coach } = props
+  const { coach, coachId } = props
 
   console.log(coach.sport.map(s => s.classes.map(classs => classs.time)))
+
+  const [show, setShow] = useState(false)
+
+  const handleOpen = () => {
+    setShow(true)
+  }
+
+  const handleClose = () => {
+    setShow(false)
+  }
+
   return (
     <>
       <div className={styles.allgroup}>
@@ -20,17 +34,18 @@ function CoachItem(props) {
               <>
                 <h2>-{s.title}-</h2>
                 {s.classes.map(classs => (
-                  <p>{classs.time}</p>
+                  <h2>{classs.time}</h2>
                 ))}
               </>
             ))}
           </header>
 
           <div className={styles.content}>
-            <a href="#">Privt-Class</a>
+            <button onClick={handleOpen}>Privt-Class</button>
           </div>
         </aside>
       </div>
+      <SubPrivtClass show={show} key={coachId} coach={coach} handleClose={handleClose} />
     </>
   )
 }

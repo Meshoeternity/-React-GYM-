@@ -27,7 +27,7 @@ function AllCoachs() {
       {/* <Row>
         <h4 className="mt-5 mb-10">All COACHS</h4>
       </Row> */}
-      <Row md={5}>
+      <Row md={4}>
         {coachs.map(coach => (
           <CoachItem key={coach._id} coach={coach} />
         ))}

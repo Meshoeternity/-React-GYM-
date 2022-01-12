@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+.titles{
+    font-size: 30px;
+    margin-top: 400px;
+    font-family: "Coda", sans-serif;
+  
+ margin-right: 10px;
+ padding: 10px;
+ left: 10px;
+ color: rgba(18, 18, 19, 0.644);
+
+
+
+
+}
+.video{
+    background-size: cover;
+    /* top: 0; */
+    /* left: 0; */
+    /* width: auto; */
+    /* object-fit: cover; */
+    z-index: -1;
+    /* margin-bottom: 30px; */
+height: 500px;
+
+}

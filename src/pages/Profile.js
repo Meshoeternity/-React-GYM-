@@ -1,10 +1,13 @@
 import { useContext } from "react"
 import { Row } from "react-bootstrap"
+import CoachProfile from "../components/CoachProfile"
 import SportItem from "../components/SportItem"
 import SportProfile from "../components/Sportprofile"
 import SportsContext from "../utils/SportsContext"
 import styles from "./Profile.module.css"
+//-----------------------------------------------------------------------
 
+//------------------------------------------------------------
 function Profile() {
   const { profile } = useContext(SportsContext)
   if (!profile) return <h1>Loading...</h1>
@@ -25,6 +28,8 @@ function Profile() {
           background: "linear-gradient(rgba(0,0,0,0.75)  ,rgba(0,0,0,0.75))",
         }}
       />
+     
+
       <div className={styles.profilegroup}>
         <h1 className={styles.titlepen}>
           {" "}
@@ -35,32 +40,35 @@ function Profile() {
           <div className={styles.username}>
             {profile.firstName} {profile.lastName}
           </div>
-        
+
           <div className={styles.description}>{profile.email}</div>
         </div>
-       
       </div>
-     
-      <h2 className={styles.hh3}>Subscribeclass</h2>
-     
-      <Row className="mt-5"  md={5}>
-         
-            
-              {profile.classes.map(classs => (
-            
-                <SportProfile sport={classs.sport} classId={classs._id} key={classs._id} />
-              ))}
-           
-           </Row>
-           {/* <Row className="mt-5"  md={5}>
-              <h3>Privtclass</h3>
-              {profile.classes.map(classs => (
-            
-                <CoachProfile sport={classs.sport} key={classs._id} />
-              ))}
-           
-           </Row> */}
 
+      <h1 className={styles.hh3}>Subscribeclass</h1>
+
+      <Row className="mt-5" md={5}>
+        {profile.classes.map(classs => (
+          <SportProfile sport={classs.sport} classId={classs._id} key={classs._id} />
+        ))}
+      </Row>
+      <h1 className={styles.hh3}>Privtclass</h1>
+      <Row className="mt-5" md={5}>
+      
+      </Row>
+      {/* //------------------------------------------------------------------------- */}
+
+      <div className={styles.all}>
+        <div className={styles.card}>
+          <img height="100%" width="100%" src={profile.privtclass.coach.photo} style={{ objectFit: "cover" }} />
+        </div>
+        <h2 >
+          {" "}
+          {profile.privtclass.coach.firstName} {profile.privtclass.coach.lastName}
+        </h2>
+        <h3> Time - {profile.privtclass.time}</h3>
+      </div>
+    
     </>
   )
 }

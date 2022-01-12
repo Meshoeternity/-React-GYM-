@@ -16,9 +16,7 @@ function SportItem(props) {
   const { sport, sportId } = props
   console.log(sport)
   const [show, setShow] = useState(false)
-  // const { show, handleOpen,handleClose } = useContext(SportsContext)
-  // console.log(handleOpen)
-  // console.log(show)
+  
   const handleOpen = () => {
     setShow(true)
   }
