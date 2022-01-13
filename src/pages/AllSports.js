@@ -16,7 +16,7 @@ function AllSports() {
             position: "absolute",
             zIndex: "-1",
             // height: "100vh",
-            minHeight:"150vh",
+            minHeight:"250vh",
             top: "0",
             backgroundsize: "cover",
             backgroundRepeat: "no-repeat",

@@ -30,7 +30,7 @@ function NavbarItem() {
             }}
           ></li>
           <li>
-          <Link  to="/home" className={{textDecoration:"none"}}>
+          <Link  to="/" className={{textDecoration:"none"}}>
             <a href="#">Home</a>
             </Link>
           </li>

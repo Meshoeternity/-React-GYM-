@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .container .card{
   vertical-align:top;
-  width:300px;
-  height:450px;
+  width:420px;
+  height:480px;
   position:relative;
   margin:30px;
   box-shadow: 20px 20px 50px rgba(0,0,0,0.8);
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6{
 
 }
 .card .content{
-  padding:30px;
+  padding:5px;
   transition:0.8s all ease;
   color:#ccc;
   transform:translateY(200px);
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6{
   position:absolute;
   /* filter: invert(82%) sepia(60%) saturate(2929%) hue-rotate(353deg) brightness(105%) contrast(103%); */
   width:140px;
-  top:50px;
+  top:30px;
   /* opacity:0.2; */
   z-index:-1;
   height:170px ;
