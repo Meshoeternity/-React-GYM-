@@ -24,9 +24,7 @@ function AllSports() {
         />
       </div>
 
-      {/* <Row>
-        <h4 className="mt-5 mb-4">All Sports</h4>
-      </Row> */}
+     
       <Row md={5}>
         {sports.map(sport => (
           <SportItem sport={sport} key={sport._id} />

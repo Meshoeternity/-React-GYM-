@@ -11,7 +11,7 @@
  */
     --form-width: 450px;
     /* --form-color: #232323; */
-      --form-color: #232323f3;
+      --form-color: #232323e1;
     --form-padding: calc(var(--form-width) * .05);
     --formtitle-size: calc(var(--form-width) * .12);
     --form-input-text-size: calc(var(--form-title-size) * .5);
@@ -161,13 +161,13 @@
     left: 35%;
     bottom: calc(var(--form-input-text-size) * -.1);
     color: var(--placeholder-color);
-    font-size: calc(var(--form-input-text-size) * .65);
+    font-size: calc(var(--form-input-text-size) * .70);
     pointer-events: none;
     transition: all 350ms ease-out;
 }
 .formcontainer form .inputgroup input:placeholder-shown + .additionallabel {
-    bottom: calc(var(--forminput-text-size) * .97);
-    font-size: calc(var(--forminput-text-size) * .8);
+    bottom: calc(var(--forminput-text-size) * .99);
+    font-size: calc(var(--forminput-text-size) * .5);
 }
 .formcontainer form .inputgroup label {
     position: relative;

@@ -38,6 +38,11 @@ function SportItem(props) {
                 {sport.coach.firstName}
                 {sport.coach.lastName}{" "}
               </p>
+              <p className={styles.contp}>
+                {sport.description}
+              
+              </p>
+
 
               <a href="#" onClick={handleOpen}>
                 Subscribe to Class
