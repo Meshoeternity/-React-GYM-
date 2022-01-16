@@ -18,7 +18,7 @@ function AllCoachs() {
             zIndex: "-1",
             // height: "100vh",
             top: "0",
-            minHeight:"100vh",
+            minHeight:"170vh",
             backgroundsize: "cover",
             backgroundRepeat: "no-repeat",
           }}
