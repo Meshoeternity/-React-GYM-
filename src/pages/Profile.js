@@ -1,7 +1,5 @@
 import { useContext } from "react"
 import { Row } from "react-bootstrap"
-import CoachProfile from "../components/CoachProfile"
-import SportItem from "../components/SportItem"
 import SportProfile from "../components/Sportprofile"
 import SportsContext from "../utils/SportsContext"
 import styles from "./Profile.module.css"
