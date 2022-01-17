@@ -13,8 +13,8 @@ function Profile(props) {
   const { profile, deletesubscribePrivtClass } = useContext(SportsContext)
   const { privtclassId } = props
 
-  if (!profile) return <h1>Loading...</h1>
   console.log(profile)
+  if (!profile) return <h1>Loading...</h1>
   return (
     <>
       <img
